@@ -7,7 +7,11 @@ object Caller {
     //zeroArgConstructor
     //privateMembers
     //publicMembers()
-    privateValues
+    //privateValues
+    //constructorV2
+    //multiConstructor
+    //constructureDefaultValue
+    constructorNamedParameter
   }
   
   def clazz() : Unit = {
@@ -46,6 +50,46 @@ object Caller {
     var obj = new PrivateValues("Naushad", 4000)
     //println(obj.name) // CE: Value name is not a member of class
     println(obj)
+  }
+  
+  def constructorV2() : Unit = {
+    var obj = new ConstructorV2("Naushad", 100)
+    obj.age = 30
+    println(obj)
+    obj.printConsData
+    
+  }
+  
+  def multiConstructor() = {
+    var obj : Any = null;
+    obj = new MultiConstructor("Naushad", 100)
+    println(obj)
+    obj = new MultiConstructor("Naushad")
+    println(obj)
+    obj = new MultiConstructor()
+    println(obj)
+    obj = new MultiConstructor("Naushad", 1000, 30)
+    println(obj)
+  }
+  
+  def constructureDefaultValue = {
+     var obj : Any = null;
+    obj = new ConstructureDefaultValue("Naushad", 100)
+    println(obj)
+    obj = new ConstructureDefaultValue("Naushad")
+    println(obj)
+    obj = new ConstructureDefaultValue()
+    println(obj)
+    obj = new ConstructureDefaultValue("Naushad", 1000, 30)
+    println(obj)
+    obj = new ConstructureDefaultValue("Naushad", age=30)
+    println(obj)
+  }
+  
+  def constructorNamedParameter() ={
+    var obj = new ConstructorNamedParameter()
+    println(obj)
+    
   }
   
 }
