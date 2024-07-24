@@ -6,8 +6,8 @@ object CaseClass {
     case class Person(name: String, sal: Int)
     var obj = Person("Naushad", 100)
    // obj.name = "Naaz"
-    obj.copy
+    obj=obj.copy("Naushad", 300)
+   
     println(obj)
-  }
-  
+  } 
 }
