@@ -89,6 +89,15 @@ object Caller {
   def constructorNamedParameter() ={
     var obj = new ConstructorNamedParameter()
     println(obj)
+    obj = new ConstructorNamedParameter(sal=1000)
+    println(obj)
+    obj = new ConstructorNamedParameter("Naushad",sal=1000)
+    println(obj)
+    obj = new ConstructorNamedParameter(name="Naaz", 1000)
+    println(obj)
+    //obj = new ConstructorNamedParameter(sal=1000, 30) // CE: Position after named argument
+    println(obj)
+    
     
   }
   
